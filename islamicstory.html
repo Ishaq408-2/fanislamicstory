@@ -11,7 +11,7 @@
   text-align: center;
   background-image: linear-gradient(to bottom, #2f4f7f, #3498db);
   color: #fff;
-}
+   }
 
 #youtube-logo {
   width: 48px;
@@ -45,9 +45,18 @@ width: 100%;
 padding-top: 60px;
 }
 
+.jam {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  color: #FFFFFF;
+}
+    
 .footer {
   position: absolute;
   bottom: 0;
+  @@ -111,6 +120,12 @@
   width: 100%;
   text-align:  center;
   color: #ccc;
@@ -111,6 +120,12 @@ padding-top: 60px;
   </style>
 </head>
 <body>
+  <script>
+setInterval(function() {
+var jam = new Date();
+var waktuWIB = jam.toLocaleTimeString("id-ID", { timeZone: "Asia/Jakarta", hour12: false });
+document.getElementById("jam").innerHTML = waktuWIB;
+}, 1000);
   <img id="youtube-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube Logo">
   <h1 style="margin-top: 20px;">Live Subscriber Counter</h1>
   <img id="channel-logo" src="logo.jpg" alt="Logo Channel Anda">
