@@ -13,6 +13,14 @@
   color: #fff;
    }
 
+ .jam {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+   color: #FFFFFF;
+ }
+
 #youtube-logo {
   width: 48px;
   height: 48px;
@@ -44,19 +52,9 @@ text-align: center;
 width: 100%;
 padding-top: 60px;
 }
-
-.jam {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  color: #FFFFFF;
-}
-    
 .footer {
   position: absolute;
   bottom: 0;
-  @@ -111,6 +120,12 @@
   width: 100%;
   text-align:  center;
   color: #ccc;
@@ -120,12 +118,6 @@ padding-top: 60px;
   </style>
 </head>
 <body>
-  <script>
-setInterval(function() {
-var jam = new Date();
-var waktuWIB = jam.toLocaleTimeString("id-ID", { timeZone: "Asia/Jakarta", hour12: false });
-document.getElementById("jam").innerHTML = waktuWIB;
-}, 1000);
   <img id="youtube-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube Logo">
   <h1 style="margin-top: 20px;">Live Subscriber Counter</h1>
   <img id="channel-logo" src="logo.jpg" alt="Logo Channel Anda">
@@ -133,6 +125,12 @@ document.getElementById("jam").innerHTML = waktuWIB;
   <div id="subscriber-count">0</div>
   <div id="subscriber-text">Subscriber</div>
   <script>
+    
+setInterval(function() {
+var jam = new Date();
+var waktuWIB = jam.toLocaleTimeString("id-ID", { timeZone: "Asia/Jakarta", hour12: false });
+document.getElementById("jam").innerHTML = waktuWIB;
+}, 1000);
     const api_key = "AIzaSyARrpDp2aV9YcZfNmTsOGP1zrANswKRaKg";
     const channel_id = "UC2MCMqxJULlzOnfsf_GAzqQ";
     let oldCount = 0;
@@ -146,7 +144,7 @@ document.getElementById("jam").innerHTML = waktuWIB;
           if (subscriber_count > oldCount) {
             document.getElementById("subscriber-count").classList.add('animate-up');
           } else if (subscriber_count < oldCount) {
-            document.getElementById("subscriber-count").classList.add('animate-down');
+            document.getElementById(subscriber-count").classList.add('animate-down');
           }
           oldCount = subscriber_count;
         })
