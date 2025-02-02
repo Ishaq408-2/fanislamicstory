@@ -125,12 +125,6 @@ padding-top: 60px;
   <div id="subscriber-count">0</div>
   <div id="subscriber-text">Subscriber</div>
   <script>
-    
-setInterval(function() {
-var jam = new Date();
-var waktuWIB = jam.toLocaleTimeString("id-ID", { timeZone: "Asia/Jakarta", hour12: false });
-document.getElementById("jam").innerHTML = waktuWIB;
-}, 1000);
     const api_key = "AIzaSyARrpDp2aV9YcZfNmTsOGP1zrANswKRaKg";
     const channel_id = "UC2MCMqxJULlzOnfsf_GAzqQ";
     let oldCount = 0;
@@ -153,6 +147,14 @@ document.getElementById("jam").innerHTML = waktuWIB;
 
     updateSubscriberCount();
     setInterval(updateSubscriberCount, 1000);
+
+        
+setInterval(function() {
+var jam = new Date();
+var waktuWIB = jam.toLocaleTimeString("id-ID", { timeZone: "Asia/Jakarta", hour12: false });
+document.getElementById("jam").innerHTML = waktuWIB;
+}, 1000);
+    
   </script>
   
   <div class="footer">
